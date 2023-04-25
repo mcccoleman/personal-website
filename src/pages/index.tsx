@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "src/components/layout";
 import headShot from "../images/headshot.jpg";
 import { Flex } from "src/components/flex";
-import { PageContent } from "src/page-components/index";
+import { PageContent } from "src/page-components";
 import { SEO } from "src/components/SEO";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
