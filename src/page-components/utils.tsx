@@ -5,17 +5,21 @@ interface Attributes {
   list: string[];
 }
 
-export const languages = {
+export const languagesAndTechnologies = {
   title: "Languages:",
   list: [
     "React",
+    "GraphQL",
+    "Rest APIs",
+    "Apollo",
     "Redux",
-    "Javascript",
+    "Typescript / Javascript",
     "Ruby",
     "Ruby on Rails",
-    "Regex",
     "Python",
     "SQL",
+    "Creating NPM packages",
+    "Creating Ruby gems",
   ],
 };
 
