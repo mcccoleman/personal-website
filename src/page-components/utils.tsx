@@ -1,12 +1,11 @@
 import React from "react";
-import { Flex } from "src/components/flex";
 
 interface Attributes {
   title: string;
   list: string[];
 }
 
-const languages = {
+export const languages = {
   title: "Languages:",
   list: [
     "React",
@@ -19,7 +18,8 @@ const languages = {
     "SQL",
   ],
 };
-const licensesAndSkills = {
+
+export const licensesAndSkills = {
   title: "Licenses and Skills:",
   list: [
     "Certified Financial Planner Practitioner",
@@ -29,7 +29,7 @@ const licensesAndSkills = {
   ],
 };
 
-const constructList = (skills: Attributes) => (
+export const constructList = (skills: Attributes) => (
   <>
     <h4>
       <u>{skills.title}</u>
@@ -40,11 +40,4 @@ const constructList = (skills: Attributes) => (
       ))}
     </ul>
   </>
-);
-
-export const LanguagesLicensesAndSkills = () => (
-  <Flex justifyContent="space-between">
-    <Flex column>{constructList(languages)}</Flex>
-    <Flex column>{constructList(licensesAndSkills)}</Flex>
-  </Flex>
 );
