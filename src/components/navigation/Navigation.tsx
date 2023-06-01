@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { PRIMARY_LINKS, EXTERNAL_LINKS } from "./constants";
+import { PRIMARY_LINKS, EXTERNAL_LINKS } from "./utils";
 import {
   NavigationContainer,
   PrimaryNavigationItemWrapper,
@@ -19,9 +19,19 @@ export const Navigation = () => (
     </Flex>
     <Flex>
       {EXTERNAL_LINKS.map(({ copy, link }) => (
-        <ExternalNavigationItemWrapper key={copy}>
-          <Link to={link}>{copy}</Link>
-        </ExternalNavigationItemWrapper>
+        <>
+          {link.includes("https") ? (
+            <ExternalNavigationItemWrapper key={copy}>
+              <Link to={link}>{copy}</Link>
+            </ExternalNavigationItemWrapper>
+          ) : (
+            <ExternalNavigationItemWrapper key={copy}>
+              <a href={link} target="_blank">
+                {copy}
+              </a>
+            </ExternalNavigationItemWrapper>
+          )}
+        </>
       ))}
     </Flex>
   </NavigationContainer>
