@@ -18,17 +18,19 @@
   "dependencies": {
     "@retirable/eslint-config": "^1.0.1",
     "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
     "gatsby": "^5.9.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.9"
+    "styled-components": "^6.0.4"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
