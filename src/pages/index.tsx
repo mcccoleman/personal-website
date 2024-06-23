@@ -1,11 +1,10 @@
 import React from "react";
-import { Layout } from "src/components/layout";
-import headShot from "../images/headshot.jpg";
-import { Flex } from "src/components/flex";
-import { PageContent } from "src/page-components";
-import { SEO } from "src/components/SEO";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+
+import { Layout, Flex, SEO } from "src/components";
+
+import { IndexPageContent } from "src/page-components";
 
 const StyledFlex = styled(Flex)`
   @media (max-width: 600px) {
@@ -27,7 +26,7 @@ const IndexPage = () => (
       <StyledImageWrapper>
         <StaticImage alt="michael-coleman" src="../images/headshot.jpg" />
       </StyledImageWrapper>
-      <PageContent />
+      <IndexPageContent />
     </StyledFlex>
   </Layout>
 );
