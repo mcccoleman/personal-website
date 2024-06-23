@@ -21,7 +21,7 @@
     "babel-plugin-styled-components": "^2.1.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
-    "gatsby": "^5.13.6",
+    "gatsby": "^5.9.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
