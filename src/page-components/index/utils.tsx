@@ -16,10 +16,12 @@ export const languagesAndTechnologies = {
     "Typescript / Javascript",
     "Ruby",
     "Ruby on Rails",
-    "Python",
     "SQL",
-    "Creating NPM packages",
-    "Creating Ruby gems",
+    "AWS AppRunner",
+    "AWS DynamoDB",
+    "AWS CDK",
+    "Java",
+    "Spring",
   ],
 };
 

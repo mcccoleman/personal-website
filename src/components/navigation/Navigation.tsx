@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
-import { PRIMARY_LINKS, EXTERNAL_LINKS } from "./utils";
+
+import { Flex } from "src/components";
+
 import {
   NavigationContainer,
   PrimaryNavigationItemWrapper,
   ExternalNavigationItemWrapper,
 } from "./navigationUtils";
-import { Flex } from "src/components/flex";
+import { PRIMARY_LINKS, EXTERNAL_LINKS } from "./utils";
 
 export const Navigation = () => (
   <NavigationContainer justifyContent="space-between">
@@ -19,19 +21,17 @@ export const Navigation = () => (
     </Flex>
     <Flex>
       {EXTERNAL_LINKS.map(({ copy, link }) => (
-        <>
+        <ExternalNavigationItemWrapper key={copy}>
           {link.includes("https") ? (
-            <ExternalNavigationItemWrapper key={copy}>
-              <Link to={link}>{copy}</Link>
-            </ExternalNavigationItemWrapper>
+            <Link to={link} target="_blank">
+              {copy}
+            </Link>
           ) : (
-            <ExternalNavigationItemWrapper key={copy}>
-              <a href={link} target="_blank">
-                {copy}
-              </a>
-            </ExternalNavigationItemWrapper>
+            <a href={link} target="_blank">
+              {copy}
+            </a>
           )}
-        </>
+        </ExternalNavigationItemWrapper>
       ))}
     </Flex>
   </NavigationContainer>
