@@ -28,12 +28,6 @@ export const PageContent = () => (
       </ExternalLink>
       . I received my MBA from Rice University.
       <br />
-      <br />I am currently a Full Stack Developer at{" "}
-      <ExternalLink destination="https://www.retirable.com">
-        Retirable
-      </ExternalLink>{" "}
-      - a financial planning service designed to get people on-track for
-      retirement.
     </p>
     <LanguagesLicensesAndSkills />
   </PageContentWrapper>
