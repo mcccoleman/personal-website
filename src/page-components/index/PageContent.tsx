@@ -1,4 +1,4 @@
-import { ExternalLink } from "src/components/external-link";
+import { ExternalLink } from "@/components/external-link";
 import { LanguagesLicensesAndSkills } from "./LanguagesLicensesAndSkills";
 import styles from "./index.module.css";
 

@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
-import { Navigation } from "src/components/navigation";
-import { Footer } from "src/components/footer";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 import styles from "./Layout.module.css";
 
 interface LayoutProps extends PropsWithChildren {}
