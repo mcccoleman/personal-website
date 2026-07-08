@@ -1,38 +1,34 @@
-import React from "react";
-import { Link } from "gatsby";
-
-import { Flex } from "src/components";
-
-import {
-  NavigationContainer,
-  PrimaryNavigationItemWrapper,
-  ExternalNavigationItemWrapper,
-} from "./navigationUtils";
+import Link from "next/link";
 import { PRIMARY_LINKS, EXTERNAL_LINKS } from "./utils";
+import styles from "./Navigation.module.css";
 
 export const Navigation = () => (
-  <NavigationContainer justifyContent="space-between">
-    <Flex>
+  <nav className={styles.nav}>
+    <div className={styles.name}>
       {PRIMARY_LINKS.map(({ copy, link }) => (
-        <PrimaryNavigationItemWrapper key={copy}>
-          <Link to={link}>{copy}</Link>
-        </PrimaryNavigationItemWrapper>
+        <Link key={copy} href={link}>
+          {copy}
+        </Link>
       ))}
-    </Flex>
-    <Flex>
-      {EXTERNAL_LINKS.map(({ copy, link }) => (
-        <ExternalNavigationItemWrapper key={copy}>
-          {link.includes("https") ? (
-            <Link to={link} target="_blank">
-              {copy}
-            </Link>
-          ) : (
-            <a href={link} target="_blank">
-              {copy}
-            </a>
-          )}
-        </ExternalNavigationItemWrapper>
-      ))}
-    </Flex>
-  </NavigationContainer>
+    </div>
+    <div className={styles.links}>
+      {EXTERNAL_LINKS.map(({ copy, link }) =>
+        link.startsWith("https") ? (
+          <a
+            key={copy}
+            className={styles.link}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {copy}
+          </a>
+        ) : (
+          <a key={copy} className={styles.link} href={link} target="_blank">
+            {copy}
+          </a>
+        )
+      )}
+    </div>
+  </nav>
 );
