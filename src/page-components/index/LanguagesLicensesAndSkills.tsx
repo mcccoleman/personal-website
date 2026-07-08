@@ -1,14 +1,17 @@
-import React from "react";
-import { Flex } from "src/components/flex";
 import {
   languagesAndTechnologies,
   licensesAndSkills,
   constructList,
 } from "./utils";
+import styles from "./index.module.css";
 
 export const LanguagesLicensesAndSkills = () => (
-  <Flex justifyContent="space-between">
-    <Flex column>{constructList(languagesAndTechnologies)}</Flex>
-    <Flex column>{constructList(licensesAndSkills)}</Flex>
-  </Flex>
+  <div className={styles.skills}>
+    <div className={styles.skillGroup}>
+      {constructList(languagesAndTechnologies)}
+    </div>
+    <div className={styles.skillGroup}>
+      {constructList(licensesAndSkills)}
+    </div>
+  </div>
 );

@@ -1,12 +1,10 @@
-import React from "react";
-
 interface Attributes {
   title: string;
   list: string[];
 }
 
 export const languagesAndTechnologies = {
-  title: "Languages:",
+  title: "Languages & Technologies",
   list: [
     "React",
     "GraphQL",
@@ -26,7 +24,7 @@ export const languagesAndTechnologies = {
 };
 
 export const licensesAndSkills = {
-  title: "Licenses and Skills:",
+  title: "Licenses & Certifications",
   list: [
     "Certified Financial Planner Practitioner",
     "Series 7 (Expired)",
@@ -37,9 +35,7 @@ export const licensesAndSkills = {
 
 export const constructList = (skills: Attributes) => (
   <>
-    <h4>
-      <u>{skills.title}</u>
-    </h4>
+    <h4>{skills.title}</h4>
     <ul>
       {skills.list.map((skill) => (
         <li key={skill}>{skill}</li>

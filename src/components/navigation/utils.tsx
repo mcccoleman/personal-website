@@ -1,4 +1,4 @@
-export const PRIMARY_LINKS = [{ link: "", copy: "Michael Coleman" }];
+export const PRIMARY_LINKS = [{ link: "/", copy: "Michael Coleman" }];
 
 export const EXTERNAL_LINKS = [
   {
